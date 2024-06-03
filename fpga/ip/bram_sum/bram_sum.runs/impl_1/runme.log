@@ -1,0 +1,55 @@
+
+*** Running vivado
+    with args -log bram_sum.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source bram_sum.tcl -notrace
+
+
+****** Vivado v2018.2 (64-bit)
+  **** SW Build 2258646 on Thu Jun 14 20:02:38 MDT 2018
+  **** IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source bram_sum.tcl -notrace
+Command: link_design -top bram_sum -part xc7z010clg400-1
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+INFO: [Netlist 29-17] Analyzing 6 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2018.2
+INFO: [Device 21-403] Loading part xc7z010clg400-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+6 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+link_design completed successfully
+link_design: Time (s): cpu = 00:00:06 ; elapsed = 00:00:13 . Memory (MB): peak = 1461.941 ; gain = 261.047 ; free physical = 177 ; free virtual = 6052
+Command: opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z010'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z010'
+Running DRC as a precondition to command opt_design
+
+Starting DRC Task
+INFO: [DRC 23-27] Running DRC with 4 threads
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net addr_OBUF[0] has multiple drivers: addr_reg[0]/Q, and addr_reg[0]__0/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net addr_OBUF[10] has multiple drivers: addr_reg[10]/Q, and addr_reg[10]__0/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net addr_OBUF[11] has multiple drivers: addr_reg[11]/Q, and addr_reg[11]__0/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net addr_OBUF[1] has multiple drivers: addr_reg[1]/Q, and addr_reg[1]__0/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net addr_OBUF[2] has multiple drivers: addr_reg[2]/Q, and addr_reg[2]__0/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net addr_OBUF[3] has multiple drivers: addr_reg[3]/Q, and addr_reg[3]__0/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net addr_OBUF[4] has multiple drivers: addr_reg[4]/Q, and addr_reg[4]__0/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net addr_OBUF[5] has multiple drivers: addr_reg[5]__0/Q, and addr_reg[5]/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net addr_OBUF[6] has multiple drivers: addr_reg[6]__0/Q, and addr_reg[6]/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net addr_OBUF[7] has multiple drivers: addr_reg[7]/Q, and addr_reg[7]__0/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net addr_OBUF[8] has multiple drivers: addr_reg[8]/Q, and addr_reg[8]__0/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net addr_OBUF[9] has multiple drivers: addr_reg[9]__0/Q, and addr_reg[9]/Q.
+INFO: [Project 1-461] DRC finished with 12 Errors
+INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
+ERROR: [Vivado_Tcl 4-78] Error(s) found during DRC. Opt_design not run.
+
+Time (s): cpu = 00:00:00.96 ; elapsed = 00:00:00.90 . Memory (MB): peak = 1516.957 ; gain = 55.016 ; free physical = 172 ; free virtual = 6049
+INFO: [Common 17-83] Releasing license: Implementation
+11 Infos, 0 Warnings, 0 Critical Warnings and 13 Errors encountered.
+opt_design failed
+ERROR: [Common 17-39] 'opt_design' failed due to earlier errors.
+
+INFO: [Common 17-206] Exiting Vivado at Thu Apr 25 18:49:59 2024...
